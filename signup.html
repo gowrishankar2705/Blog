@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Classic Chronicles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff8e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .signup-container {
+            background-color: #f9fbe7;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .signup-container h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #6a1b9a;
+            font-weight: 700;
+        }
+
+        .signup-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .signup-container input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .signup-container button {
+            padding: 10px;
+            background-color: #6a1b9a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .signup-container button:hover {
+            background-color: #4a0072;
+        }
+
+        .signup-container .login-link {
+            margin-top: 10px;
+            color: #6a1b9a;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .signup-container .login-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup-container">
+        <h1>Sign Up</h1>
+        <form action="welcome.html" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+            <a href="login.html" class="login-link">Already have an account? Login</a>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Journeys - Classic Chronicles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff8e1;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #6a1b9a;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+
+        header nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        header nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            width: 80%;
+            margin: 30px auto;
+            background-color: #f9fbe7;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h2 {
+            font-size: 2.2em;
+            color: #6a1b9a;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        section p {
+            margin-bottom: 15px;
+        }
+
+        .comment-section {
+            margin-top: 30px;
+        }
+
+        .comment-section h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #6a1b9a;
+            font-weight: 700;
+        }
+
+        .comment-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .comment-section input,
+        .comment-section textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .comment-section button {
+            padding: 10px;
+            background-color: #6a1b9a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .comment-section button:hover {
+            background-color: #4a0072;
+        }
+
+        .comments {
+            margin-top: 20px;
+        }
+
+        .comment {
+            padding: 10px;
+            background-color: #ffcc80;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .comment h4 {
+            margin: 0 0 5px;
+            font-size: 1.1em;
+            color: #6a1b9a;
+            font-weight: 700;
+        }
+
+        .comment p {
+            margin: 0;
+        }
+
+        .reply-button {
+            margin-left: 10px;
+            background-color: #6a1b9a;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .reply-button:hover {
+            background-color: #4a0072;
+        }
+
+        .replies {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .reply {
+            background-color: #ffe0b2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .reply h4 {
+            margin: 0 0 5px;
+            font-size: 1em;
+            color: #6a1b9a;
+            font-weight: 700;
+        }
+
+        .reply p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Classic Chronicles</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#login">Login</a>
+            <a href="#signup">Sign Up</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Opinion & Commentary </h2>
+            <p>Welcome to the Opinion & Commentary section of Classic Chronicles. Here you can share your life experiences, challenges, and triumphs. Inspire others with your unique story.</p>
+        </section>
+
+        <div class="comments">
+            
+                <div class="reply-form" style="display: none;">
+                    <form onsubmit="submitReply(event)">
+                        <input type="text" class="reply-name" placeholder="Your Name" required>
+                        <textarea class="reply-comment" rows="2" placeholder="Your Reply" required></textarea>
+                        <button type="submit">Submit Reply</button>
+                    </form>
+                </div>
+                <div class="replies" style="display: none;">
+                    <!-- New replies will be added here -->
+                </div>
+            </div>
+            <!-- New comments will be added here -->
+        </div>
+
+        <div class="comment-section">
+            <h3>Leave a Comment</h3>
+            <form onsubmit="submitComment(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <textarea id="comment" rows="4" placeholder="Your Comment" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </main>
+
+    <script>
+        function submitComment(event) {
+            event.preventDefault();
+            const name = document.querySelector('#name').value;
+            const comment = document.querySelector('#comment').value;
+
+            const commentSection = document.querySelector('.comments');
+            const newComment = document.createElement('div');
+            newComment.classList.add('comment');
+            newComment.innerHTML = `
+                <h4>${name}</h4>
+                <p>${comment}</p>
+                <button class="reply-button" onclick="toggleReplyForm(this)">Reply</button>
+                <div class="reply-form" style="display: none;">
+                    <form onsubmit="submitReply(event)">
+                        <input type="text" class="reply-name" placeholder="Your Name" required>
+                        <textarea class="reply-comment" rows="2" placeholder="Your Reply" required></textarea>
+                        <button type="submit">Submit Reply</button>
+                    </form>
+                </div>
+                <div class="replies" style="display: none;">
+                    <!-- New replies will be added here -->
+                </div>
+            `;
+            commentSection.appendChild(newComment);
+
+            document.querySelector('#name').value = '';
+            document.querySelector('#comment').value = '';
+        }
+
+        function toggleReplyForm(button) {
+            const replyForm = button.nextElementSibling;
+            const repliesSection = button.parentElement.querySelector('.replies');
+
+            if (replyForm.style.display === 'none' || replyForm.style.display === '') {
+                replyForm.style.display = 'block';
+                repliesSection.style.display = 'block';
+            } else {
+                replyForm.style.display = 'none';
+                repliesSection.style.display = 'none';
+            }
+        }
+
+        function submitReply(event) {
+            event.preventDefault();
+            const replyName = event.target.querySelector('.reply-name').value;
+            const replyComment = event.target.querySelector('.reply-comment').value;
+
+            const repliesSection = event.target.closest('.comment').querySelector('.replies');
+            const newReply = document.createElement('div');
+            newReply.classList.add('reply');
+            newReply.innerHTML = `
+                <h4>${replyName}</h4>
+                <p>${replyComment}</p>
+            `;
+            repliesSection.appendChild(newReply);
+
+            event.target.querySelector('.reply-name').value = '';
+            event.target.querySelector('.reply-comment').value = '';
+        }
+    </script>
+</body>
+
+</html>
