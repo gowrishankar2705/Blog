@@ -67,7 +67,7 @@ If you’d like to improve this project, feel free to fork the repository and cr
 ## 🧑‍💻 Author
 
 **Gowrishankar S**  
-B.Tech in AI & Data Science | Forge Fellow at Forge Innovation & Ventures  
+B.Tech in AI & Data Science  
 - GitHub: [@gowrishankar2705](https://github.com/gowrishankar2705)  
 - LinkedIn: [https://www.linkedin.com/in/gowrishankar-s-59a782253]  
 
