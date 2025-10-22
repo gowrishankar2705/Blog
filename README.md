@@ -66,8 +66,8 @@ If you’d like to improve this project, feel free to fork the repository and cr
 
 **Your Name**  
 B.Tech in AI & Data Science | Forge Fellow at Forge Innovation & Ventures  
-- GitHub: [@your-username](https://github.com/your-username)  
-- LinkedIn: [Your LinkedIn URL]  
+- GitHub: [@gowrishankar2705](https://github.com/gowrishankar2705)  
+- LinkedIn: [https://www.linkedin.com/in/gowrishankar-s-59a782253]  
 
 ---
 
