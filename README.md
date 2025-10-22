@@ -51,9 +51,11 @@ npm start
 
 ## 📸 Screenshots
 
-*(Add a few screenshots of your website interface here)*  
+---<img width="1919" height="912" alt="Screenshot 2025-10-22 143310" src="https://github.com/user-attachments/assets/d98b0cef-2738-4e55-a8ff-b4826c512e4a" />
+<img width="1919" height="915" alt="Screenshot 2025-10-22 143235" src="https://github.com/user-attachments/assets/ea4d0f61-494c-433d-9272-0da10c6ea920" />
+<img width="1919" height="915" alt="Screenshot 2025-10-22 143248" src="https://github.com/user-attachments/assets/95cc2abc-604b-4cf9-a1fa-d1fc7ace196c" />
 
----
+
 
 ## 🤝 Contributing
 
@@ -64,7 +66,7 @@ If you’d like to improve this project, feel free to fork the repository and cr
 
 ## 🧑‍💻 Author
 
-**Your Name**  
+**Gowrishankar S**  
 B.Tech in AI & Data Science | Forge Fellow at Forge Innovation & Ventures  
 - GitHub: [@gowrishankar2705](https://github.com/gowrishankar2705)  
 - LinkedIn: [https://www.linkedin.com/in/gowrishankar-s-59a782253]  
